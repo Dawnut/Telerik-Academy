@@ -1,56 +1,55 @@
-# Object-Oriented-Programming
+Homework: Defining Classes - Part 1
+===================================
 
-Repository for the course [Object-oriented programming with C#](https://telerikacademy.com/Courses/Courses/Details/338) at [Telerik Academy](https://telerikacademy.com)
+### Problem 1. Define class
+*	Define a class that holds information about a mobile phone device: model, manufacturer, price, owner, battery characteristics (model, hours idle and hours talk) and display characteristics (size and number of colors).
+*	Define 3 separate classes (class `GSM` holding instances of the classes `Battery` and `Display`).
 
+### Problem 2. Constructors
+*	Define several constructors for the defined classes that take different sets of arguments (the full information for the class or part of it).
+*	Assume that model and manufacturer are mandatory (the others are optional). All unknown data fill with null.
 
-## Course program
+### Problem 3. Enumeration
+*	Add an enumeration `BatteryType` (Li-Ion, NiMH, NiCd, …) and use it as a new field for the batteries.
 
-### [00. Course Introduction](/Topics/00. Course-Intro)
+### Problem 4. ToString
+*	Add a method in the `GSM` class for displaying all information about it.
+*	Try to override `ToString()`.
 
-Course Program, Examination, Trainers
+### Problem 5. Properties
+*	Use properties to encapsulate the data fields inside the `GSM`, `Battery` and `Display` classes.
+*	Ensure all fields hold correct data at any given time.
 
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="18"/>Slides](https://rawgit.com/TelerikAcademy/Object-Oriented-Programming/master/Topics/00.%20Course-intro/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/00. Course-Intro/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/00. Course-Intro/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="15"> Videos](/Topics/00. Course-Intro/VIDEOS.md)
+### Problem 6. Static field
+*	Add a static field and a property `IPhone4S` in the GSM class to hold the information about iPhone 4S.
 
+### Problem 7. GSM test
+*	Write a class `GSMTest` to test the `GSM` class:
+	*	Create an array of few instances of the `GSM` class.
+	*	Display the information about the GSMs in the array.
+	*	Display the information about the static property `IPhone4S`.
 
-### [01. Defining Classes 1](/Topics/01. Defining-Classes-Part-1)
+### Problem 8. Calls
+*	Create a class `Call` to hold a call performed through a GSM.
+*	It should contain date, time, dialled phone number and duration (in seconds).
 
-Classes, Fields, Constructors, Methods, Properties
+### Problem 9. Call history
+*	Add a property `CallHistory` in the `GSM` class to hold a list of the performed calls.
+*	Try to use the system class `List<Call>`.
 
+### Problem 10. Add/Delete calls
+*	Add methods in the `GSM` class for adding and deleting calls from the calls history.
+*	Add a method to clear the call history.
 
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](https://rawgit.com/TelerikAcademy/Object-Oriented-Programming/master/Topics/01. Defining-Classes-Part-1/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/01. Defining-Classes-Part-1/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/01. Defining-Classes-Part-1/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/01. Defining-Classes-Part-1/VIDEOS.md)
+### Problem 11. Call price
+*	Add a method that calculates the total price of the calls in the call history.
+*	Assume the price per minute is fixed and is provided as a parameter.
 
-
-### [02. Defining Classes 2](/Topics/02. Defining-Classes-Part-2)
-
-Static Members, Structures,Enumerations, Generic Classes, Namespaces
-
-
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](https://rawgit.com/TelerikAcademy/Object-Oriented-Programming/master/Topics/02. Defining-Classes-Part-2/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/02. Defining-Classes-Part-2/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/02. Defining-Classes-Part-2/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/02. Defining-Classes-Part-2/VIDEOS.md)
-
-### [03. Extension Methods, Delegates, Lambda Expressions, LINQ](/Topics/03. Extension-Methods-Delegates-Lambda-LINQ)
-
-Extension Methods, Anonymous Types, Delegates, Lambda Expressions, LINQ, Dynamic, Events
-
-
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](https://rawgit.com/TelerikAcademy/Object-Oriented-Programming/master/Topics/03. Extension-Methods-Delegates-Lambda-LINQ/slides/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/03. Extension-Methods-Delegates-Lambda-LINQ/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/03. Extension-Methods-Delegates-Lambda-LINQ/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/03. Extension-Methods-Delegates-Lambda-LINQ/VIDEOS.md)
-
-
-### [04. OOP Principles 1](/Topics/04. OOP-Principles-Part-1)
-
-Inheritance, Abstraction, Encapsulation
-
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](https://rawgit.com/TelerikAcademy/Object-Oriented-Programming/master/Topics/04. OOP-Principles-Part-1/slides/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/04. OOP-Principles-Part-1/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/04. OOP-Principles-Part-1/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/04. OOP-Principles-Part-1/VIDEOS.md)
-
-### [05. OOP Principles 2](/Topics/05. OOP-Principles-Part-2)
-
-Polymorphism, Class Hierarchies, Exceptions, Strong Cohesion and Loose Coupling
-
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](https://rawgit.com/TelerikAcademy/Object-Oriented-Programming/master/Topics/05. OOP-Principles-Part-2/slides/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/05. OOP-Principles-Part-2/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/05. OOP-Principles-Part-2/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/05. OOP-Principles-Part-2/VIDEOS.md)
-
-### [06. Common Type System](/Topics/06. Common-Type-System)
-
-.NET Types Hierarchy, Cloning, Comparing,Value and Reference Types, Parameters Passing
-
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](https://rawgit.com/TelerikAcademy/Object-Oriented-Programming/master/Topics/06. Common-Type-System/slides/index.html) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/06. Common-Type-System/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/06. Common-Type-System/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/06. Common-Type-System/VIDEOS.md)
-
-### [07. OOP Workshop](/Topics/07. OOP-Workshop)
+### Problem 12. Call history test
+*	Write a class `GSMCallHistoryTest` to test the call history functionality of the `GSM` class.
+	*	Create an instance of the `GSM` class.
+	*	Add few calls.
+	*	Display the information about the calls.
+	*	Assuming that the price per minute is `0.37` calculate and print the total price of the calls in the history.
+	*	Remove the longest call from the history and calculate the total price again.
+	*	Finally clear the call history and print it.
