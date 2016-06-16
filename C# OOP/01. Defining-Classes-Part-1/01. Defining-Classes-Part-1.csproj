@@ -48,7 +48,7 @@
     <Compile Include="GSM Components\GSM.cs" />
     <Compile Include="Tests\GSMCallHistoryTest.cs" />
     <Compile Include="Tests\GSMTest.cs" />
-    <Compile Include="Tests\StartUpFile.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

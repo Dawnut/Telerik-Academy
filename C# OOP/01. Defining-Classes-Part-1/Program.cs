@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GSMComponents;
+using GSMTests;
 
-namespace GSM
+namespace GSMProgram
 {
     class Program
     {

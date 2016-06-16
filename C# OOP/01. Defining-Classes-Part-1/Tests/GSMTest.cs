@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GSMComponents;
 
-namespace GSM
+namespace GSMTests
 {
+
     public static class GSMTest
     {
         public static void DevicesTest() 
