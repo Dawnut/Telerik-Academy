@@ -7,7 +7,7 @@
     <ProjectGuid>{06BD5318-2B0C-4157-906B-DA562C9E265C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02.Defining_Classes_Part_2</RootNamespace>
+    <RootNamespace>Defining_Classes_2</RootNamespace>
     <AssemblyName>_02.Defining_Classes_Part_2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -31,6 +31,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -41,13 +45,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="3DSpace\Distance.cs" />
+    <Compile Include="GenericClass\GenericList.cs" />
+    <Compile Include="3DSpace\Path.cs" />
+    <Compile Include="3DSpace\PathStorage.cs" />
+    <Compile Include="3DSpace\Point3D.cs" />
+    <Compile Include="Matrix\Matrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VersionAttribute\VersionAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="3DSpace\Paths.txt" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
