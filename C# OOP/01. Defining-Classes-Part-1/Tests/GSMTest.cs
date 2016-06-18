@@ -13,6 +13,7 @@ namespace GSMTests
         public static void DevicesTest() 
         {
 
+
             // Initializing batteries and displays outside of the GSM constructors,
             // as the constructors should not initialize anyhting (good practice).
 

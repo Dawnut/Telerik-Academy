@@ -44,6 +44,7 @@ namespace GSMComponents
                 }
                 
                 this.manufacturer = value;
+                
             }
         }
         public decimal? Price
@@ -134,11 +135,11 @@ namespace GSMComponents
 
         }
 
-        public void AddCall(DateTime dateTime, string dialedNumber, int duration)
+        public void AddCall(Call call)
         {
-            this.callHistory.Add(new Call(dateTime, dialedNumber, duration));
+            this.callHistory.Add(call);
         }
-
+        
         public void DeleteCall(int callIndex)
         {
             this.callHistory.Remove(callHistory[callIndex]);

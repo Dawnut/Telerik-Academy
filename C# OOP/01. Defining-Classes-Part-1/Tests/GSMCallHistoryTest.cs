@@ -19,9 +19,9 @@ namespace GSMTests
             var display = new Display(5.2, 24000);
             var phone = new GSM("Galaxy S7", "Samsung", 700, "Pesho", battery, display);
 
-            phone.AddCall(DateTime.Now, "0999999999", 60);
-            phone.AddCall(new DateTime(2016, 7, 12, 23, 58, 30), "0444444444", 60);
-            phone.AddCall(new DateTime(2016, 3, 2, 5, 50, 40), "0888888888", 120);
+            phone.AddCall(new Call (DateTime.Now, "0999999999", 60));
+            phone.AddCall(new Call (new DateTime(2016, 7, 12, 23, 58, 30), "0444444444", 60));
+            phone.AddCall(new Call (new DateTime(2016, 3, 2, 5, 50, 40), "0888888888", 120));
 
             Console.WriteLine("CALL HISTORY:");
             Console.WriteLine(phone.DisplayCallHistory() + "\n");
