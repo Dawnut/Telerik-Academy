@@ -28,10 +28,8 @@ function solve() {
 
 		function listBooks(term = null) {
 			return (term === null) ? books.sort(compareID) :
-				(term.category) ?
-					books.filter(element => element.category === term.category).sort(compareID) :
-					(term.author) !== null ?
-						books.filter(element => element.author === term.author).sort(compareID) : null
+				(term.category) ? books.filter(element => element.category === term.category).sort(compareID) :
+					(term.author) !== null ? books.filter(element => element.author === term.author).sort(compareID) : null
 		}
 
 		function addBook(book) {
