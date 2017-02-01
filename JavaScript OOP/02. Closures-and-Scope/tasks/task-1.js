@@ -21,58 +21,32 @@
 			*	If something is not valid - throw Error
 */
 function solve() {
-	var library = (function () {
-		var books = [];
-		var categories = [];
-		var idCounter = 1;
-
-		function compare(a, b) {
-			if (a.ID < b.ID)
-				return -1;
-			if (a.ID > b.ID)
-				return 1;
-			return 0;
-		}
+	let library = (function () {
+		let books = [];
+		let categories = [];
+		let idCounter = 1;
 
 		function listBooks(term = null) {
-			var sortedBooks = [];
-
-
-			if (term === null) {
-				sortedBooks = books.sort(compare);
-			}
-			else if (term.category !== null) {
-				sortedBooks = books.filter(element => element.category === term.category).sort(compare);
-			}
-			else if (term.author !== null) {
-				sortedBooks = books.filter(element => element.author === term.author).sort(compare);
-			}
-
-			return sortedBooks;
-
+			return (term === null) ? books.sort(compareID) :
+				(term.category) ?
+					books.filter(element => element.category === term.category).sort(compareID) :
+					(term.author) !== null ?
+						books.filter(element => element.author === term.author).sort(compareID) : null
 		}
 
 		function addBook(book) {
-			var newCategory = {};
-			var categoryExists = false;
+			let newCategory = {};
+			let categoryExists = false;
+
 			validateBook(book);
 			book.ID = idCounter;
 			idCounter++;
 			books.push(book);
 
-			if (categories.length === 0) {
-				newCategory.ID = idCounter;
-				idCounter++;
-				newCategory.name = book.category;
-				categories.push(newCategory);
-			}
-			if (categories.length !== 0) {
-				categories.forEach(element => {
-					if (element.name === book.category) {
-						categoryExists = true;
-					}
-				});
-			}
+			if (!categories) categoryExists = false
+			else categories.forEach(element => {
+				if (element.name === book.category) categoryExists = true;
+			})
 
 			if (!categoryExists) {
 				newCategory.ID = idCounter;
@@ -80,41 +54,31 @@ function solve() {
 				newCategory.name = book.category;
 				categories.push(newCategory);
 			}
-
-			return book;
+			return book; ``
 		}
 
 		function listCategories() {
-			console.log(categories.sort(compare).map(x => x.name));
-			return categories.sort(compare).map(x => x.name);
+			console.log(categories.sort(compareID).map(x => x.name));
+			return categories.sort(compareID).map(x => x.name);
+		}
+
+		function compareID(a, b) {
+			(a.ID < b.ID) ? -1 :
+				(a.ID > b.ID) ? 1 : 0
 		}
 
 		function validateBook(book) {
 
-			if (book.title.length < 2) {
-				throw new Error('Title too short');
-			}
-			else if (book.title.length > 100) {
-				throw new Error('Title too long');
-			}
-			else if (book.isbn.length < 10 || book.isbn.length > 13) {
-				throw new Error('ISBN code is invalid');
-			}
-			else if (typeof book.author != 'string') {
-				throw new Error('Author is invalid');
-			}
-			else if (book.author === '') {
-				throw new Error('Author is invalid');
-			}
+			if (book.title.length < 2) throw new Error('Title too short');
+			else if (book.title.length > 100) throw new Error('Title too long');
+			else if (book.isbn.length < 10 || book.isbn.length > 13) throw new Error('ISBN code is invalid');
+			else if (typeof book.author != 'string') throw new Error('Author is invalid');
+			else if (book.author === '') throw new Error('Author is invalid');
+
 			books.forEach(element => {
-				if (element.title === book.title) {
-					throw new Error('Title already exists');
-				}
-				if (element.isbn === book.isbn) {
-					throw new Error('Title already exists');
-				}
+				if (element.title === book.title) throw new Error('Title already exists');
+				if (element.isbn === book.isbn) throw new Error('Title already exists');
 			});
-			return;
 		}
 
 		return {
@@ -128,29 +92,6 @@ function solve() {
 		};
 	} ());
 
-	// library.books.add({
-	// 	"author": "John Doe",
-	// 	"category": 'test',
-	// 	"isbn": "1234567890123",
-	// 	"title": "BOOK 1"
-	// });
-	// library.books.add({
-	// 	"author": "John Doe",
-	// 	"category": 'test2',
-	// 	"isbn": "1345678290123",
-	// 	"title": "BOOK 2"
-	// });
-
-	// library.books.add({
-	// 	"author": "John Doe",
-	// 	"category": 'test3',
-	// 	"isbn": "1342678290123",
-	// 	"title": "BOOK 3"
-	// });
-	// library.categories.list();
-
 	return library;
 }
-// solve();
-
-module.exports = solve;
+module.exports = solve; //delete this for BGCoder
