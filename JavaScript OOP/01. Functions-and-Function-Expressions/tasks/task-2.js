@@ -7,7 +7,31 @@
 */
 
 function solve() {
-	return function findPrimes() {
+	return function findPrimes(start, end) {
+		let result = [];
+
+		if (arguments.length < 2) throw new Error('Param is missing');
+		else if (isNaN(+start) || isNaN(+end)) throw new Error('Param not convertible to number');
+
+		for (let num = +start; num <= +end; num++) {
+			if (isPrime(num)) result.push(num);
+		}
+
+		return result;
+
+		function isPrime(number) {
+			var maxDivisor = Math.sqrt(number),
+				isPrime = true,
+				currDivisor;
+
+			if (number < 2) return false;
+
+			for (currDivisor = 2; currDivisor <= maxDivisor; currDivisor++) {
+				if (!(number % currDivisor)) {isPrime = false; break;}
+			}
+
+			return isPrime;
+		}
 	}
 }
 

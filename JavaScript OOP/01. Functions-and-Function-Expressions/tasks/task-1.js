@@ -9,8 +9,18 @@
 */
 
 function solve() {
-	return function sum() {
+	return function sum(numbers) {
+		let sum = 0;
+
+		if (numbers == undefined) throw new Error('Argument not passed');
+		if (numbers.length === 0) return null;
+
+		numbers.forEach(function (element) {
+			if (isNaN(+element)) throw new Error('An Element is not convertable to number');
+			else sum += +element;
+		});
+
+		return sum;
 	}
 }
-
 module.exports = solve;
