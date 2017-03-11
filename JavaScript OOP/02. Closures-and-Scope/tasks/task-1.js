@@ -47,10 +47,8 @@ function solve() {
 			})
 
 			if (!categoryExists) {
-				newCategory.ID = idCounter;
+				categories.push({name: book.category, ID: idCounter});
 				idCounter++;
-				newCategory.name = book.category;
-				categories.push(newCategory);
 			}
 			return book; ``
 		}
