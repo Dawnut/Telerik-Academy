@@ -48,8 +48,8 @@ function solve() {
       var nextSibling = currentElement.nextElementSibling;
 
       while (true) {
-        if (nextSibling.className === 'content') return nextSibling;
-        else if (nextSibling.className === 'button') return null;
+        if (nextSibling == null || nextSibling.className === 'button') return null;
+        else if (nextSibling.className === 'content') return nextSibling;
         else nextSibling = nextSibling.nextElementSibling;
       }
     }
